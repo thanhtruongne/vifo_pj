@@ -169,6 +169,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Nwidart\Modules\LaravelModulesServiceProvider::class,
+        Shetabit\Visitor\Provider\VisitorServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,7 +187,10 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Visitor' => Shetabit\Visitor\Facade\Visitor::class,
         'Module' => Nwidart\Modules\Facades\Module::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Redis' => Illuminate\Support\Facades\Redis::class,
     ])->toArray(),
     
     'datafile' => [

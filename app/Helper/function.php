@@ -78,6 +78,11 @@ function check_password($password)
     }
 }
 
+function profile()
+{
+  $profile = session()->get('profile');
+  return $profile;
+}
 function createSlug($text, $maxLength = 20)
 {
     // Bỏ dấu và chuyển đổi thành chữ thường

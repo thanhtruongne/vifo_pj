@@ -1,3 +1,6 @@
 {
-    "Products": true
+    "Products": true,
+    "Role": true,
+    "Providers": true,
+    "SaleMan": true
 }

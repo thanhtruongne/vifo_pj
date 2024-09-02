@@ -1,0 +1,11 @@
+{
+    "name": "SaleMan",
+    "alias": "saleman",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SaleMan\\App\\Providers\\SaleManServiceProvider"
+    ],
+    "files": []
+}
