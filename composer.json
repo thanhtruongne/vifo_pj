@@ -17,6 +17,7 @@
         "maatwebsite/excel": "^3.1",
         "nwidart/laravel-modules": "^10.0",
         "predis/predis": "^2.2",
+        "protonemedia/laravel-xss-protection": "^1.5",
         "shetabit/visitor": "^4.3",
         "spatie/laravel-permission": "^6.9"
     },
