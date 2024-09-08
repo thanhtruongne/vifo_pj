@@ -6,25 +6,15 @@ use Illuminate\Console\Command;
 
 class ClearCache extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
     protected $signature = 'app:clear-cache';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Xóa cache mỗi 23h hằng ngày';
+    protected $description = 'Xóa cache chạy 1 ngày 1 lần (0 1 * * *)';
+    protected $expression ='0 1 * * *';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        //
+        \Artisan::call('cache:clear');
     }
 }

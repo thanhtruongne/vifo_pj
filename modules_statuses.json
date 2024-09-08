@@ -2,5 +2,6 @@
     "Products": true,
     "Role": true,
     "Providers": true,
-    "SaleMan": true
+    "SaleMan": true,
+    "Api": true
 }

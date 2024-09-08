@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('lastname', 150);
             $table->string('email', 200)->nullable();
             $table->dateTime('last_online')->nullable();
-            $table->string('remember_token')->nullable();
+            // $table->string('remember_token')->nullable();
             $table->boolean('re_login')->default(0)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

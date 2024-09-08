@@ -21,7 +21,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereIpAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUserId($value)
- * @mixin \Eloquent
  * @property string $user_code
  * @property string $user_name
  * @property int $number_hits
@@ -29,6 +28,27 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUserCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUserName($value)
  * @property-read \App\Models\User|null $user
+ * @property int|null $user_type 1: người dùng , 2: nghi vấn
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory all($columns = [])
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory avg($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory cache(array $tags = [])
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory cachedValue(array $arguments, string $cacheKey)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory count($columns = '*')
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory disableCache()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory disableModelCaching()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory exists()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory flushCache(array $tags = [])
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory getModelCacheCooldown(\Illuminate\Database\Eloquent\Model $instance)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory inRandomOrder($seed = '')
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory insert(array $values)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory isCachable()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory max($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory min($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory sum($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory truncate()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory whereUserType($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|LoginHistory withCacheCooldownSeconds(?int $seconds = null)
+ * @mixin \Eloquent
  */
 class LoginHistory extends Model
 {

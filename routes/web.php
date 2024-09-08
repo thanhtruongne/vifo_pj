@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.layouts');
+
+
+Route::get('system/login',[LoginController::class,'index'])->name('backend.login');
+
+
+Route::group(['prefix' => '/system/admin','middleware' => ['auth']],function(){
+    Route::get('/', function () {
+        return view('layouts.layouts');
+        
+    })->name('home');
 });
+
+
+
+
+
+
