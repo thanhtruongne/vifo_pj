@@ -1,17 +1,18 @@
+@php
+    $profile = profile();
+@endphp
 <nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element"> <span>
-                    <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                    <img alt="image" class="img-circle" src="{{$profile->avatar ?? ''}}" />
                      </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                     </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ $profile->firstname ?? '' }} {{ $profile->lastname ?? '' }}</strong>
+                     </span> <span class="text-muted text-xs block">Thông tin <b class="caret"></b></span> </span> </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
                         <li><a href="profile.html">Profile</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="mailbox.html">Mailbox</a></li>
                         <li class="divider"></li>
                         <li><a href="login.html">Logout</a></li>
                     </ul>
@@ -20,17 +21,31 @@
                     IN+
                 </div>
             </li>
-            <li class="active">
-                <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    <li class="active"><a href="index.html">Dashboard v.1</a></li>
-                    <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                    <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                    <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
-                    <li><a href="dashboard_5.html">Dashboard v.5 </a></li>
-                </ul>
-            </li>
-            <li>
+            @foreach ($leftMenuBackend as $key =>  $item)
+                <li class="" data-id="{{ $item['id'] }}" data-key="{{$key}}">
+                    <a href="#">
+                        <i class="{{$item['icon']}}"></i>
+                        <span class="nav-label">{{$item['name']}}</span> 
+                        @if (!empty($item['item_childs']) && count($item['item_childs']) > 0)
+                            <span class="fa arrow"></span>
+                        @endif
+                    </a>
+                    @if (isset($item['item_childs']) && !empty($item['item_childs']))
+                        <ul class="nav nav-second-level collapse">
+                            @foreach ($item['item_childs'] as $child)
+                                <li class=""> 
+                                    <a href="{{$child['url'] ?: ''}}" class="nav-link active" style="display: flex;align-items:center"> 
+                                        <i class="{{$child['icon']}}"></i>
+                                        <p style="margin:0">{{ $child['name'] }}</p>
+                                    </a>
+                                </li>
+                            @endforeach    
+                        </ul>
+                    @endif
+                </li>
+            @endforeach
+          
+            {{-- <li>
                 <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
             </li>
             <li>
@@ -228,7 +243,7 @@
             </li>
             <li class="special_link">
                 <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
-            </li>
+            </li> --}}
         </ul>
 
     </div>

@@ -40,16 +40,16 @@
 
  <script>
      $(document).ready(function() {
-         setTimeout(function() {
-             toastr.options = {
-                 closeButton: true,
-                 progressBar: true,
-                 showMethod: 'slideDown',
-                 timeOut: 4000
-             };
-             toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+        //  setTimeout(function() {
+        //      toastr.options = {
+        //          closeButton: true,
+        //          progressBar: true,
+        //          showMethod: 'slideDown',
+        //          timeOut: 4000
+        //      };
+        //      toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
 
-         }, 1300);
+        //  }, 1300);
 
 
          var data1 = [

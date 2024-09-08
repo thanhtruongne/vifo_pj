@@ -23,7 +23,6 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereIpAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUserId($value)
- * @mixin \Eloquent
  * @property string $user_code
  * @property string $user_name
  * @property int $number_hits
@@ -31,6 +30,41 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUserCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LoginHistory whereUserName($value)
  * @property-read \App\Models\User|null $user
+ * @property string $name
+ * @property string|null $description
+ * @property string $guard_name mac985 định là web
+ * @property string|null $model đối tượng tên table
+ * @property string|null $parent mã parent code
+ * @property int $status 1: enable, 0: disable
+ * @property string|null $extend kế thừa quyền từ model khác
+ * @property string|null $group Nhóm quyền theo module
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions all($columns = [])
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions avg($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions cache(array $tags = [])
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions cachedValue(array $arguments, string $cacheKey)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions count($columns = '*')
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions disableCache()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions disableModelCaching()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions exists()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions flushCache(array $tags = [])
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions getModelCacheCooldown(\Illuminate\Database\Eloquent\Model $instance)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions inRandomOrder($seed = '')
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions insert(array $values)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions isCachable()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions max($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions min($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions sum($column)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions truncate()
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereDescription($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereExtend($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereGroup($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereGuardName($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereModel($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereName($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereParent($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions whereStatus($value)
+ * @method static \GeneaLabs\LaravelModelCaching\CachedBuilder|Permissions withCacheCooldownSeconds(?int $seconds = null)
+ * @mixin \Eloquent
  */
 class Permissions extends Model
 {

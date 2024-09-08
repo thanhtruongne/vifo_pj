@@ -26,6 +26,15 @@ class PermissionDatabaseSeeder extends Seeder
             ['role-delete-employee','Xoá nhân viên vào vai trò',null,'roles', 1],
             ['role-delete', 'Xoá vai trò',null,'roles', 1],
 
+             // Vai trò role
+             ['product-family','Quản lý thông tin bảo hiểm','roles',null, 1],
+             ['role-create','Thêm vai trò',null,'roles', 1],
+             ['role-edit','Chỉnh sửa vai trò',null,'roles', 1],
+             ['role-permission','Cấp quyền vai trò',null,'roles', 1],
+             ['role-create-employee','Thêm nhân viên vào vai trò',null,'roles', 1],
+             ['role-delete-employee','Xoá nhân viên vào vai trò',null,'roles', 1],
+             ['role-delete', 'Xoá vai trò',null,'roles', 1],
+
             // Provider
             ['provider','Quản lý nhà cung cấp','providers',null, 2],
             ['provider-create','Thêm nhà cung cấp',null,'providers', 2],
